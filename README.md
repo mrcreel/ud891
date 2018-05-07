@@ -1,3 +1,5 @@
+<!-- python -m SimpleHTTPServer -->
+
 # Udacity Web Accessibility
 
 Hi there! This is the course repo for Udacity Web Accessibility. Contained in
