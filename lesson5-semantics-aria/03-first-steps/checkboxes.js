@@ -21,6 +21,7 @@
     this.el.addEventListener('click', this.toggle.bind(this));
 
     // Any other set-up we want to do here?
+
   }
 
   Checkbox.prototype.handleKeyDown = function(e) {
@@ -34,17 +35,16 @@
   };
 
   Checkbox.prototype.toggle = function() {
+
     if (this.el.hasAttribute('checked')) {
       this.el.removeAttribute('checked');
-
-      // Hmm.
-
+      this.el.setAttribute("aria-checked", false)
     } else {
-      this.el.setAttribute('checked', '');
-
-      // Hmmmmm.
-
+      this.el.setAttribute('checked', '')
+      this.el.setAttribute("aria-checked", true)
     }
+    const getCheckBoxState = this.el.getAttribute("aria-checked")
+    console.log(getCheckBoxState)
   };
 
   var checkboxes = slice(document.querySelectorAll('.checkbox'));
